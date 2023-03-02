@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" prefHeight="301.0" prefWidth="260.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lado.uiceaser.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <TextField fx:id="textField" />
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <Button onAction="#onHelloButtonClick" text="Зашифровать" />
+            <Button fx:id="button" onAction="#chooseFile" text="Выбрать файл" />
+            <TextField fx:id="keyInput" />
+        </children>
+    </HBox>
+
+    <Label fx:id="welcomeText" prefHeight="18.0" prefWidth="138.0" />
+    <SplitPane fx:id="resultPane" dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" visible="false">
+        <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <children>
+                    <Button fx:id="DecFreqAn" layoutX="51.0" layoutY="18.0" mnemonicParsing="false" onAction="#decipherByFreeqan" text="Частотный анализ" />
+                </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+            <HBox prefHeight="32.0" prefWidth="220.0">
+                <children>
+                    <TextField fx:id="Keyblyad"/>
+                    <Button fx:id="desipherToKey" mnemonicParsing="false" onAction="#deChipherToKey" text="Дешивровать(по ключу)" />
+                </children>
+            </HBox>
+            <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="151.0" />
+        </items>
+    </SplitPane>
+</VBox>
